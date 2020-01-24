@@ -5,6 +5,13 @@
   "projects": {
     "angular-localize": {
       "projectType": "application",
+      
+      "i18n": {
+        "locales": {
+          "fr":"messages.fr.xlf" ,
+          "tm": "messages.tm.xlf"
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -60,6 +67,12 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "tm": {
+              "localize": ["tm"]
             }
           }
         },
@@ -71,6 +84,12 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-localize:build:production"
+            },
+            "fr": {
+              "browserTarget": "angular-localize:build:fr"
+            },
+            "tm": {
+              "browserTarget": "angular-localize:build:tm"
             }
           }
         },
